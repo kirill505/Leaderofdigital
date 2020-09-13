@@ -39,7 +39,8 @@ print('Model loaded using {} as device'.format(device))
 model.eval()
 
 
-camera = cv2.VideoCapture('rtsp://192.168.1.64:8080/h264_pcm.sdp')
+#camera = cv2.VideoCapture('rtsp://192.168.1.64:8080/h264_pcm.sdp')
+camera = cv2.VideoCapture('0')
 
 face_detector = FaceDetector(device=device)
 
