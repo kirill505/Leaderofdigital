@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 RUN ls -la
 #RUN mkdir app
-COPY -r /frontend /app/
-COPY -r /ml_server /app/
+COPY /frontend/* /app/
+COPY /ml_server/* /app/
 
 CMD cd /app && python app.py
