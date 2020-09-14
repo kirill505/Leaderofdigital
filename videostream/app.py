@@ -54,7 +54,7 @@ def gen_frames():
             break
         else:
             # ret, buffer = cv2.imencode('.jpg', frame)
-            # frame = buffer.tobytes()
+            # frame = frame.tobytes()
 
             frame = frame[:, :, ::-1]
             frame = cv2.flip(frame, 1)
@@ -88,7 +88,7 @@ def gen_frames():
                 frame_num = 0
             display = cv2.putText(display, 'FPS: {:.2f}'.format(fps), (0, 20), cv2.FONT_HERSHEY_PLAIN, 1, (255, 255, 0),
                                   1, cv2.LINE_AA)
-
+            display = cv2.cvtColor(display, cv2.COLOR_RGB2BGR)
             ret, res = cv2.imencode('.jpg', display)
 
             # concat frame one by one and show result
