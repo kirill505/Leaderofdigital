@@ -22,4 +22,7 @@
 
 ## Демо-видео:
 https://youtu.be/ghR46JNIKxI 
+<p align="left">
+  <img src="images/screen.jpg">
+</p>
 Веб-интерфейс можно посмотреть здесь - https://zhenyadope.github.io/HackatonRostelecom/
