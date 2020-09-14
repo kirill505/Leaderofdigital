@@ -13,6 +13,8 @@ RUN pip install -r requirements.txt
 RUN ls -la
 RUN mkdir app
 COPY -r * /app/
+COPY -r ../frontend/ /app/
+
 
 
 CMD cd /app && python app.py
