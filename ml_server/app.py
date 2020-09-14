@@ -12,8 +12,8 @@ from mtcnn import FaceDetector
 
 app = Flask(__name__,
             static_url_path='',
-            static_folder='frontend/static',
-            template_folder='frontend/templates')
+            static_folder='../frontend/static',
+            template_folder='../frontend/templates')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cpu', action='store_true')
@@ -35,7 +35,7 @@ model.eval()
 
 # camera = cv2.VideoCapture('rtsp://192.168.1.64:8080/h264_pcm.sdp')
 # camera = cv2.VideoCapture('0')
-camera = cv2.VideoCapture('WIN_20200913_12_41_53_Pro.mp4')
+camera = cv2.VideoCapture('demo.mp4')
 
 face_detector = FaceDetector(device=device)
 
